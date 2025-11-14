@@ -17,16 +17,31 @@
     <div class="grid-container">
     
     <div class="logo-cell"></div>  
+
     <div class="item_hvezda-cell"></div>
-    
+    <div class="item_hvezda-cell2"></div>
     
     <div class="item_sipka_dole2-cell"></div>
-   
-    <div class="text1">HeartBalance spojuje pohyb a zodpovědnost. Naše podložky vznikají v chráněné dílně na Valašsku a dávají práci lidem s handicapem.</div>
+    <div class="item_sipka_dole3-cell"></div>
+    <div class="item_sipka_dole4-cell"></div>
+    <div class="item_sipka_dole5-cell"></div>
+    <div class="item_sipka_dole6-cell"></div>
+
+
+   <div class="text1">HeartBalance spojuje pohyb a zodpovědnost. Naše podložky vznikají v chráněné dílně na Valašsku a dávají práci lidem s handicapem.</div>
     <div class="text2">Produkty</div>
      <div class="text3">BALANCECORE</div>
     <div class="text4">BALANCEFIT</div>
+     <div class="text5">Tvrdá čtvercová podložka pro intenzivní posilování pro  fitness nadšence.</div>
+     <div class="text6">Univerzální čtvercová podložka pro jógu, stabilizaci a dostupné cvičení.</div>
     
+    
+    <div class="JSME">JSME</div>
+    <div class="text8">Vyrábíme cvičební podložky, které pomáhají lidem nacházet rovnováhu v pohybu, v mysli i v životě.Každý kus vzniká v chráněné dílně na Valašsku, kde dáváme práci lidem s fyzickým a psychickým handicapem.Naše produkty nejsou jen o výkonu, ale i o respektu, lidskosti a poctivé české výrobě.Proto věříme, že když se staráme o rovnováhu těla, pomáháme vytvářet i vyrovnanější společnost.
+</div>
+
+    <div class="Obr"></div>
+
     
    
    
@@ -82,10 +97,10 @@ viewer2.autoRotate = false;
 
 window.addEventListener('scroll', () => {
   const scrollFraction = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-  const xRotation = scrollFraction * 280;
+  const xRotation = scrollFraction * 90;
 
-  viewer1.cameraOrbit = `${xRotation}deg 90deg 90deg`;
-  viewer2.cameraOrbit = `${-xRotation}deg 90deg 90deg`;
+  viewer1.cameraOrbit = `${-xRotation}deg 90deg 90deg`;
+  viewer2.cameraOrbit = `${xRotation}deg 90deg 90deg`;
 
   viewer1.jumpCameraToGoal();
   viewer2.jumpCameraToGoal();
@@ -96,7 +111,7 @@ window.addEventListener('scroll', () => {
   <script>
     const container = document.querySelector('.grid-container');
 
-    const totalCells = 200; // celkový počet buněk 
+    const totalCells = 50; // celkový počet buněk 
     const existingCells = container.querySelectorAll('.cell').length;
 
     const emptyCellsToAdd = totalCells - existingCells;
@@ -115,7 +130,7 @@ window.addEventListener('scroll', () => {
 
     // Determine columns from CSS (responsive). Fallback to 12/12 layout.
     const cols = window.matchMedia('(max-width: 600px)').matches ? 6 : 12;
-    const rows = 50;
+    const rows = 19;
     const totalCells2 = cols * rows;
 
     // Clear any existing cell2 children (avoid duplicates on hot-reload)

@@ -449,6 +449,10 @@ html.page-hidden, body.page-hidden {
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 100; 
 }
+.text3:hover {
+   transform: scale(1.05);
+    
+  }
 
 .text4 {
   grid-column: 7 / 11;  /* sloupce  */
@@ -469,6 +473,10 @@ html.page-hidden, body.page-hidden {
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 100; 
 }
+.text4:hover {
+   transform: scale(1.05);
+    
+  }
 
 
 .text5 {
